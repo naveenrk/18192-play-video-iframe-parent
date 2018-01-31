@@ -3,8 +3,10 @@ videojs.registerPlugin('listenForParent', function() {
   // This method called when postMessage sends data into the iframe
   function controlVideo(evt){
     if(evt.data === "playVideo") {
+      alert("played")
       myPlayer.play();
     } else if (evt.data === 'pauseVideo') {
+      alert("paused")
       myPlayer.pause();
     }
   };
